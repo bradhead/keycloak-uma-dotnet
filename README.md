@@ -1,6 +1,6 @@
 <!--- NOTE: This is a template for your project README. Edit the content according to the comments provided.--->
 
-# <application_license_badge>
+# Keycloak AuthZClient for .Net Core
 <!--- [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE) --->
 
 # <application_name>
@@ -18,27 +18,18 @@
 - [ ] Production/Maintenance
 
 ## Documentation
-<!--- Point to another readme or create a GitHub Pages (https://guides.github.com/features/pages/) --->
+A basic port of the Java AuthZ Client package to use with .Net core middleware in order to support User Managed Access 2.0
 
-## Security
-<!--- Authentication, Authorization, Policies, etc --->
-
-## Files in this repository
-<!--- Use Tree to generate the file structure, try `tree -I '<excluded_paths>' -d -L 3`--->
 
 ## Getting Started
-<!--- setup env vars, secrets, instructions... --->
+TBD
 
 ## Deployment (Local Development)
 * Developer Workstation Requirements/Setup:
-<!--- instruction on Minishift/Docker/Other services.. --->
+TBD
 
 * Application Specific Setup:
 <!--- instruction on setup local environment and dependencies.. --->
-
-
-## Deployment (OpenShift)
-<!--- Best to include details in a openshift/README.md --->
 
 ## Getting Help or Reporting an Issue
 <!--- Example below, modify accordingly --->
@@ -54,8 +45,6 @@ By participating in this project you agree to abide by its terms.
 
 
 ## License
-<!--- Example below, modify accordingly --->
-    Copyright 2018 Province of British Columbia
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
