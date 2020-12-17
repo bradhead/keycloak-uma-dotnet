@@ -1,11 +1,8 @@
 [![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
-
-# Keycloak UMA 2.0 SDK for .NET
-
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE)
 
-# <application_name>
-A .NET SDK for accessing Keycloak UMA 2.0 and Authorization APIs 
+# Keycloak UMA 2.0 SDK for .NET
+A C# .NET SDK for accessing Keycloak UMA 2.0 and Authorization APIs 
 
 ## Technical Details
 Based on .NET core 3.1 with updates for .NET 5. C# language.
