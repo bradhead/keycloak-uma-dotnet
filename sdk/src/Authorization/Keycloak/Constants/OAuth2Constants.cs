@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloak.Authorization.Keycloak
+namespace Keycloak.Authorization
 {
     /// <summary> Keycloak's OAuth 2.0 constant values.</summary>
     public static class OAuth2Constants

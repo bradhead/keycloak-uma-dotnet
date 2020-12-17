@@ -13,16 +13,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloak.Authorization.Keycloak.Client.Resource
+namespace Keycloak.Client.Resource
 {
     using System;
     using System.Net.Http;
     using System.Text.Json;
     using System.Threading.Tasks;
 
-    using Keycloak.Authorization.Keycloak.Client.Configuration;
-    using Keycloak.Authorization.Keycloak.Client.Util;
-    using Keycloak.Authorization.Keycloak.Representation;
+    using Keycloak.Client.Configuration;
+    using Keycloak.Client.Util;
+    using Keycloak.Representation;
     using Keycloak.Services;
 
     using Microsoft.Extensions.Logging;

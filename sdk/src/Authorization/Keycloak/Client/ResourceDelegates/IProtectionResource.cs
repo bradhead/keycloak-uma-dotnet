@@ -13,12 +13,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloak.Authorization.Keycloak.Client.Resource
+namespace Keycloak.Client.Resource
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    using Keycloak.Authorization.Keycloak.Client.Representation;
+    using Keycloak.Client.Representation;
 
     ///
     /// <summary>An entry point for managing permission tickets using the Protection API.</summary>

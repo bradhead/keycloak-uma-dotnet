@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloak.Authorization.Keycloak
+namespace Keycloak.Authorization
 {
     /// <summary>Keycloak Service URL Constant template Url paths... well known Urls.</summary>
     public static class ServiceUrlConstants

@@ -13,10 +13,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloak.Authorization.Keycloak.Client
+namespace Keycloak.Client
 {
-    using Keycloak.Authorization.Keycloak.Client.Configuration;
-    using Keycloak.Authorization.Keycloak.Client.Resource;
+    using Keycloak.Client.Configuration;
+    using Keycloak.Client.Resource;
     using Keycloak.Services;
 
     using Microsoft.Extensions.Logging;
@@ -28,7 +28,7 @@ namespace Keycloak.Authorization.Keycloak.Client
     /// from the server at http(s)://{server}:{port}/auth/realms/{realm}/.well-known/uma-configuration.
     /// In the org.keycloak Java libs, this class is called 'AuthZClient'.
     /// </summary>
-    public class AuthzClient
+    public class AuthorizationClient
     {
         /// <summary>
         /// The injected logger delegate.
@@ -46,7 +46,7 @@ namespace Keycloak.Authorization.Keycloak.Client
         private readonly IKeycloakConfiguration keycloakConfiguration;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuthzClient"/> class.
+        /// Initializes a new instance of the <see cref="AuthorizationClient"/> class.
         /// </summary>
         /// <param name="logger">The injected logger provider.</param>
         /// <param name="httpClientService">injected HTTP client service.</param>
@@ -54,8 +54,8 @@ namespace Keycloak.Authorization.Keycloak.Client
         /// <param name="serverConfigurationResource">Injected server configuration resource.</param>
         /// <param name="authorizationResource">Injected authorization resource.</param>
         /// <param name="protectionResource">Injected protection resource.</param>
-        public AuthzClient(
-            ILogger<AuthzClient> logger,
+        public AuthorizationClient(
+            ILogger<AuthorizationClient> logger,
             IHttpClientService httpClientService,
             IKeycloakConfiguration keycloakConfiguration,
             IServerConfigurationResource serverConfigurationResource,

@@ -13,11 +13,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloak.Authorization.Keycloak.Client.Resource
+namespace Keycloak.Client.Resource
 {
     using System.Threading.Tasks;
 
-    using Keycloak.Authorization.Keycloak.Representation;
+    using Keycloak.Representation;
 
     /// <summary>
     /// An entry point for obtaining permissions from the server.

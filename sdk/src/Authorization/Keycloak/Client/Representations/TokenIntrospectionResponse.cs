@@ -13,13 +13,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloak.Authorization.Keycloak.Client.Representation
+namespace Keycloak.Client.Representation
 {
     using System.Collections.Generic;
     using System.IdentityModel.Tokens.Jwt;
     using System.Text.Json.Serialization;
 
-    using Keycloak.Authorization.Keycloak.Representation;
+    using Keycloak.Representation;
 
     /// <summary>
     /// An authorization response in form of an OAuth2 access token.

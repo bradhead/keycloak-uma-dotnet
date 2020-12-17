@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloak.Authorization.Keycloak.Client.Configuration
+namespace Keycloak.Client.Configuration
 {
     using System;
     using System.Collections.Generic;

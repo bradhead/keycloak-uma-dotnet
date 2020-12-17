@@ -13,12 +13,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloakement.Authorization.Keycloak.Client.Representation
+namespace Keycloak.Client.Representation
 {
     using System.Collections.Generic;
 
-    using Keycloakement.Authorization.Keycloak.Representation;
-    using Keycloakement.Authorization.Keycloak.Representation.Tokens;
+    using Keycloak.Representation;
+    using Keycloak.Representation.Tokens;
 
     /// <summary>Some handy extensions to the serializable AccessToken. These were part of AuthorizationContext.java in the original
     /// keycloak client library, but that class is not useful in dotnet core. </summary>

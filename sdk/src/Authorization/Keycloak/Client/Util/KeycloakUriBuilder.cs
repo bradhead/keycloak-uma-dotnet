@@ -13,12 +13,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloak.Authorization.Keycloak.Client.Util
+namespace Keycloak.Client.Util
 {
     using System;
     using System.Globalization;
 
-    using Keycloak.Authorization.Keycloak.Client.Configuration;
+    using Keycloak.Client.Configuration;
 
     /// <summary>Helper class to build a URL from the well-known URL constant templates for Keycloak.</summary>
     public static class KeycloakUriBuilder

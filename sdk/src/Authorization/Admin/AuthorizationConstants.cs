@@ -29,10 +29,5 @@ namespace Keycloak.Authorization.Admin
         /// Represents the relative redirect to end authentication and authorization.
         /// </summary>
         public const string LogoutPath = "/logout";
-
-        /// <summary>
-        /// Represents the name of the auth cookie.
-        /// </summary>
-        public const string CookieName = "HealthGatewayAdmin";
     }
 }

@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloakement.Authorization.Keycloak.Client.Util
+namespace Keycloak.Client.Util
 {
     using System;
     using System.Collections.Generic;
@@ -23,9 +23,8 @@ namespace Keycloakement.Authorization.Keycloak.Client.Util
     using System.Text;
     using System.Threading.Tasks;
 
-    using Keycloakement.Authorization.Keycloak;
-    using Keycloakement.Authorization.Keycloak.Representation;
-    using Keycloakement.Authorization.Keycloak.Representation.Tokens;
+    using Keycloak.Representation;
+    using Keycloak.Representation.Tokens;
 
     /// <summary>Extensions for HttpClient to handle OAuth 2.0 UMA.</summary>
     public static class HttpClientExtensions
