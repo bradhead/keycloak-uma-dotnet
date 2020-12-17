@@ -16,7 +16,7 @@
 namespace Keycloak.Authorization.Admin
 {
     /// <summary>
-    /// A class with constants representing the various authorization settings not needing to be comfigurable.
+    /// A class with constants representing the various authorization settings not needing to be configurable.
     /// </summary>
     public static class AuthorizationConstants
     {
