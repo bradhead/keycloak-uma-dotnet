@@ -1,6 +1,16 @@
 {
     "cSpell.words": [
+        "OIDC",
+        "PKCE",
         "jwks",
+        "openid",
+        "rsid",
+        "rsname",
         "uri"
+    ],
+    "cSpell.ignoreWords": [
+        "check",
+        "iframe",
+        "session"
     ]
 }
