@@ -1,17 +1,14 @@
-<!--- NOTE: This is a template for your project README. Edit the content according to the comments provided.--->
+[![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-# Keycloak AuthZClient for .Net Core
-<!--- [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE) --->
+# Keycloak UMA 2.0 SDK for .NET
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE)
 
 # <application_name>
-<!--- Description of the application. ---> 
+A .NET SDK for accessing Keycloak UMA 2.0 and Authorization APIs 
 
 ## Technical Details
-<!--- Technology Stack Used. ---> 
-
-## Third-Party Products/Libraries used and the licenses they are covered by
-<!--- product/library and path to the LICENSE --->
-<!--- Example: <library_name> - [![GitHub](<shield_icon_link>)](<path_to_library_LICENSE>) --->
+Based on .NET core 3.1 with updates for .NET 5. C# language.
 
 ## Project Status
 - [x] Development
@@ -37,7 +34,6 @@ To report bugs/issues/feature requests, please file an [issue](../../issues).
 
 
 ## How to Contribute
-<!--- Example below, modify accordingly --->
 If you would like to contribute, please see our [CONTRIBUTING](./CONTRIBUTING.md) guidelines.
 
 Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). 
