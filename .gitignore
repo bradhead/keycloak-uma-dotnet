@@ -6,6 +6,9 @@
 *.exe
 *.o
 *.so
+# VS/VS Code ignores #
+###################
+*.vs
 
 # Packages #
 ############
