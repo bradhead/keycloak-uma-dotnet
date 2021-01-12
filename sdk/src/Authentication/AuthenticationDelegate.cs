@@ -22,6 +22,7 @@ namespace Keycloak.Authentication
     using System.Threading.Tasks;
 
     using Keycloak.Authentication.Models;
+    using Keycloak.Client.Services;
 
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.Logging;
@@ -88,19 +89,19 @@ namespace Keycloak.Authentication
 
         private async Task<IAuthModel> ClientCredentialsGrant()
         {
-            JWTModel authModel = new JWTModel();
+            JWTModel ?authModel = new JWTModel();
             try
             {
                 using HttpClient client = this.httpClientService.CreateDefaultHttpClient();
 
-                IEnumerable<KeyValuePair<string, string>> oauthParams = new[]
+                IEnumerable<KeyValuePair<string, string>> ?oauthParams = new[]
                 {
                     new KeyValuePair<string, string>(@"client_id", this.TokenRequest.ClientId),
                     new KeyValuePair<string, string>(@"client_secret", this.TokenRequest.ClientSecret),
                     new KeyValuePair<string, string>(@"audience", this.TokenRequest.Audience),
                     new KeyValuePair<string, string>(@"grant_type", @"client_credentials"),
                 };
-                using var content = new FormUrlEncodedContent(oauthParams);
+                using var content = new FormUrlEncodedContent(oauthParams!);
                 content.Headers.Clear();
                 content.Headers.Add(@"Content-Type", @"application/x-www-form-urlencoded");
 
@@ -116,17 +117,17 @@ namespace Keycloak.Authentication
                 this.logger.LogError($"Error Message {e.Message}");
             }
 
-            return authModel;
+            return authModel!;
         }
 
         private async Task<IAuthModel> ResourceOwnerPasswordGrant()
         {
-            JWTModel authModel = new JWTModel();
+            JWTModel ?authModel = new JWTModel();
             try
             {
                 using HttpClient client = this.httpClientService.CreateDefaultHttpClient();
 
-                IEnumerable<KeyValuePair<string, string>> oauthParams = new[]
+                IEnumerable<KeyValuePair<string, string>> ?oauthParams = new[]
                 {
                     new KeyValuePair<string, string>(@"client_id", this.TokenRequest.ClientId),
                     new KeyValuePair<string, string>(@"client_secret", this.TokenRequest.ClientSecret),
@@ -137,7 +138,7 @@ namespace Keycloak.Authentication
                     new KeyValuePair<string, string>(@"password", this.TokenRequest.Password),
                 };
 
-                using var content = new FormUrlEncodedContent(oauthParams);
+                using var content = new FormUrlEncodedContent(oauthParams!);
                 content.Headers.Clear();
                 content.Headers.Add(@"Content-Type", @"application/x-www-form-urlencoded");
 
@@ -153,7 +154,7 @@ namespace Keycloak.Authentication
                 this.logger.LogError($"Error Message {e.Message}");
             }
 
-            return authModel;
+            return authModel!;
         }
     }
 }

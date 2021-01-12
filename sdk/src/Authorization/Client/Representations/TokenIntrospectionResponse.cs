@@ -13,21 +13,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //-------------------------------------------------------------------------
-namespace Keycloak.Client.Resource
+namespace Keycloak.Client.Representation
 {
-    using System.Threading.Tasks;
+    using System.Collections.Generic;
+    using System.IdentityModel.Tokens.Jwt;
+    using System.Text.Json.Serialization;
 
     using Keycloak.Authorization.Representation;
 
     /// <summary>
-    /// An entry point for obtaining permissions from the server.
+    /// An authorization response in form of an OAuth2 access token.
     /// </summary>
-    public interface IAuthorizationResource
+    public class TokenIntrospectionResponse : JwtPayload
     {
-        /// <summary>Query the server for permissions given an <see cref="AuthorizationRequest"/>.</summary>
-        /// <param name="request">A <see cref="AuthorizationRequest"/> instance.</param>
-        /// <param name="accessToken">A Base64 encoded OAuth 2.0 accessToken from an authentication event.</param>
-        /// <returns>An <see cref="AuthorizationRequest"/>with a RPT holding all granted permissions.</returns>
-        public Task<AuthorizationResponse> Authorize(AuthorizationRequest request, string accessToken);
+        /// <summary>Gets or sets a value indicating whether permissions are active.</summary>
+        [JsonPropertyName("active")]
+        public bool Active { get; set; } = false;
+
+        /// <summary>Gets a list of permissions.</summary>
+        [JsonPropertyName("permissions")]
+        public List<Permission> Permissions { get; } = new List<Permission>();
     }
 }

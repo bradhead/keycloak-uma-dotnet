@@ -17,8 +17,8 @@ namespace Keycloak.Client.Representation
 {
     using System.Collections.Generic;
 
-    using Keycloak.Representation;
-    using Keycloak.Representation.Tokens;
+    using Keycloak.Authorization.Representation;
+    using Keycloak.Authorization.Representation.Tokens;
 
     /// <summary>Some handy extensions to the serializable AccessToken. These were part of AuthorizationContext.java in the original
     /// keycloak client library, but that class is not useful in dotnet core. </summary>

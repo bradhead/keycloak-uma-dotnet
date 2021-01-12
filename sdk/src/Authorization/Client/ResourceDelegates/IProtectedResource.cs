@@ -19,7 +19,7 @@ namespace Keycloak.Client.Resource
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    using Keycloak.Representation;
+    using Keycloak.Authorization.Representation;
 
     ///
     /// <summary>An entry point for managing permission tickets using the Protection API.</summary>
@@ -27,20 +27,20 @@ namespace Keycloak.Client.Resource
     public interface IProtectedResource
     {
         /// <summary>
-        /// Creates a new Resource on the authorization server. See <see cref="Keycloak.Representation.ProtectedResource"/> class.
+        /// Creates a new Resource on the authorization server. See <see cref="Resource"/> class.
         /// </summary>
         /// <param name="resource">The Resource data.</param>
         /// <param name="token"> A valid base64 access_token from authenticing the caller.</param>
         /// <returns>The Resource created.</returns>
-        public Task<Keycloak.Representation.ProtectedResource> Create(Keycloak.Representation.ProtectedResource resource, string token);
+        public Task<Resource> Create(Resource resource, string token);
 
         /// <summary>
-        /// Updates an existing Resource on the authorization server. See <see cref="Keycloak.Representation.ProtectedResource"/> class.
+        /// Updates an existing Resource on the authorization server. See <see cref="Resource"/> class.
         /// </summary>
         /// <param name="resource">The Resource to be updated.</param>
         /// <param name="token"> A valid base64 access_token from authenticing the caller.</param>
         /// <returns>True when updated.</returns>
-        public Task<bool> Update(Keycloak.Representation.ProtectedResource resource, string token);
+        public Task<bool> Update(Resource resource, string token);
 
         /// <summary>Deletes an existing user-managed Resource from the server.</summary>
         /// <param name="resourceId">The Resource identifier.</param>
@@ -54,7 +54,7 @@ namespace Keycloak.Client.Resource
         /// <param name="resourceId">The Resource  ID to be found.</param>
         /// <param name="token"> A valid base64 access_token from authenticing the caller.</param>
         /// <returns>The Resource found.</returns>
-        public Task<Keycloak.Representation.ProtectedResource> FindById(string resourceId, string token);
+        public Task<Resource> FindById(string resourceId, string token);
 
         /// <summary>
         /// Query the server for a Resource with a given Uri.
@@ -62,7 +62,7 @@ namespace Keycloak.Client.Resource
         /// <param name="uri">The url to be found.</param>
         /// <param name="token"> A valid base64 access_token from authenticing the caller.</param>
         /// <returns>Returns a list of Resources that best matches the given Uri.</returns>
-        public Task<List<Keycloak.Representation.ProtectedResource>> FindByUri(Uri uri, string token);
+        public Task<List<Resource>> FindByUri(Uri uri, string token);
 
         /// <summary>
         /// Query the server for a Resource with a given Uri.
@@ -71,7 +71,7 @@ namespace Keycloak.Client.Resource
         /// <param name="uri">The url to be found.</param>
         /// <param name="token"> A valid base64 access_token from authenticing the caller.</param>
         /// <returns>Returns a list of Resources that best matches the given Uri.</returns>
-        public Task<List<Keycloak.Representation.ProtectedResource>> FindByMatchingUri(Uri uri, string token);
+        public Task<List<Resource>> FindByMatchingUri(Uri uri, string token);
 
         /// <summary>Query the server for all resources.</summary>
         /// <param name="token"> A valid base64 access_token from authenticing the caller.</param>

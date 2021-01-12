@@ -21,8 +21,9 @@ namespace Keycloak.Client.Resource
     using System.Text.Json;
     using System.Threading.Tasks;
 
+    using Keycloak.Authorization.Representation;
+    using Keycloak.Client.Services;
     using Keycloak.Client.Util;
-    using Keycloak.Services;
 
     using Microsoft.AspNetCore.WebUtilities;
     using Microsoft.Extensions.Logging;
@@ -53,7 +54,7 @@ namespace Keycloak.Client.Resource
         }
 
         /// <inheritdoc/>
-        public async Task<Keycloak.Representation.ProtectedResource> Create(Keycloak.Representation.ProtectedResource resource, string token)
+        public async Task<Resource> Create(Resource resource, string token)
         {
             HttpClient client = this.httpClientService.CreateDefaultHttpClient();
 
@@ -63,7 +64,7 @@ namespace Keycloak.Client.Resource
             string requestUrl = this.serverConfigurationDelegate.ServerConfiguration.ResourceRegistrationEndpoint;
             client.BaseAddress = new Uri(requestUrl);
 
-            string jsonOutput = JsonSerializer.Serialize<Keycloak.Representation.ProtectedResource>(resource);
+            string jsonOutput = JsonSerializer.Serialize<Resource>(resource);
 
             using (HttpContent content = new StringContent(jsonOutput))
             {
@@ -74,13 +75,13 @@ namespace Keycloak.Client.Resource
                 }
 
                 string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                Keycloak.Representation.ProtectedResource resourceResponse = JsonSerializer.Deserialize<Keycloak.Representation.ProtectedResource>(result);
-                return resourceResponse;
+                Resource ?resourceResponse = JsonSerializer.Deserialize<Resource>(result);
+                return resourceResponse!;
             }
         }
 
         /// <inheritdoc/>
-        public async Task<bool> Update(Keycloak.Representation.ProtectedResource resource, string token)
+        public async Task<bool> Update(Resource resource, string token)
         {
             HttpClient client = this.httpClientService.CreateDefaultHttpClient();
 
@@ -90,7 +91,7 @@ namespace Keycloak.Client.Resource
             string requestUrl = this.serverConfigurationDelegate.ServerConfiguration.PermissionEndpoint + "/" + resource.Id;
             client.BaseAddress = new Uri(requestUrl);
 
-            string jsonOutput = JsonSerializer.Serialize<Keycloak.Representation.ProtectedResource>(resource);
+            string jsonOutput = JsonSerializer.Serialize<Resource>(resource);
 
             using (HttpContent content = new StringContent(jsonOutput))
             {
@@ -129,7 +130,7 @@ namespace Keycloak.Client.Resource
         }
 
         /// <inheritdoc/>
-        public async Task<Keycloak.Representation.ProtectedResource> FindById(string resourceId, string token)
+        public async Task<Resource> FindById(string resourceId, string token)
         {
             HttpClient client = this.httpClientService.CreateDefaultHttpClient();
 
@@ -146,18 +147,18 @@ namespace Keycloak.Client.Resource
             }
 
             string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            Keycloak.Representation.ProtectedResource resourceResponse = JsonSerializer.Deserialize<Keycloak.Representation.ProtectedResource>(result);
-            return resourceResponse;
+            Resource ?resourceResponse = JsonSerializer.Deserialize<Resource>(result);
+            return resourceResponse!;
         }
 
         /// <inheritdoc/>
-        public async Task<List<Keycloak.Representation.ProtectedResource>> FindByUri(Uri uri, string token)
+        public async Task<List<Resource>> FindByUri(Uri uri, string token)
         {
             return await this.Find(null, null, uri, null, null, null, false, false, true, null, null, token).ConfigureAwait(true);
         }
 
         /// <inheritdoc/>
-        public async Task<List<Keycloak.Representation.ProtectedResource>> FindByMatchingUri(Uri uri, string token)
+        public async Task<List<Resource>> FindByMatchingUri(Uri uri, string token)
         {
             return await this.Find(null, null, uri, null, null, null, true, false, true, null, null, token).ConfigureAwait(true);
         }
@@ -181,8 +182,8 @@ namespace Keycloak.Client.Resource
             }
 
             string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            string[] resourceIds = JsonSerializer.Deserialize<string[]>(result);
-            return resourceIds;
+            string[] ?resourceIds = JsonSerializer.Deserialize<string[]>(result);
+            return resourceIds!;
         }
 
         /// <summary>
@@ -202,7 +203,7 @@ namespace Keycloak.Client.Resource
         /// <param name="maxResult">Max Result.  -1 for no limit.</param>
         /// <param name="token"> A valid base64 access_token from authenticing the caller.</param>
         /// <returns>Returns a list of Resources that best matches the given Uri.</returns>
-        private async Task<List<Keycloak.Representation.ProtectedResource>> Find(
+        private async Task<List<Resource>> Find(
                 string? resourceId,
                 string? name,
                 Uri? uri,
@@ -279,8 +280,8 @@ namespace Keycloak.Client.Resource
             }
 
             string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            List<Keycloak.Representation.ProtectedResource> resourceResponse = JsonSerializer.Deserialize<List<Keycloak.Representation.ProtectedResource>>(result);
-            return resourceResponse;
+            List<Resource> ?resourceResponse = JsonSerializer.Deserialize<List<Resource>>(result);
+            return resourceResponse!;
         }
     }
 }

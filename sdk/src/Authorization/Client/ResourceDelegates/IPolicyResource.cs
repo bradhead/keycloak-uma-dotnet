@@ -18,7 +18,7 @@ namespace Keycloak.Client.Resource
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    using Keycloak.Representation;
+    using Keycloak.Authorization.Representation;
 
     /// <summary>An entry point for managing user-managed access permissions for a particular resource.</summary>
     public interface IPolicyResource

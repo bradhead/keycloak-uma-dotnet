@@ -14,7 +14,7 @@
 //  limitations under the License.
 // -------------------------------------------------------------------------
 
-namespace Keycloak.Services
+namespace Keycloak.Client.Services
 {
     using System;
     using System.Globalization;

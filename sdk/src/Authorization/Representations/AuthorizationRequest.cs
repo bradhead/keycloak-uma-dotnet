@@ -17,7 +17,7 @@ namespace Keycloak.Authorization.Representation
 {
     using System.Collections.Generic;
 
-    using Keycloak.Authorization.Keycloak.Representation.Tokens;
+    using Keycloak.Authorization.Representation.Tokens;
 
     /// <summary>
     /// UMA 2.0 AuthorizationRequest.

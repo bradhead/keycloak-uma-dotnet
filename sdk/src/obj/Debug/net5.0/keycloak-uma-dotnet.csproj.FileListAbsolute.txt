@@ -1,0 +1,12 @@
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/bin/Debug/net5.0/keycloak-uma-dotnet.deps.json
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/bin/Debug/net5.0/keycloak-uma-dotnet.dll
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/bin/Debug/net5.0/ref/keycloak-uma-dotnet.dll
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/bin/Debug/net5.0/keycloak-uma-dotnet.pdb
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/Debug/net5.0/keycloak-uma-dotnet.csprojAssemblyReference.cache
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/Debug/net5.0/keycloak-uma-dotnet.GeneratedMSBuildEditorConfig.editorconfig
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/Debug/net5.0/keycloak-uma-dotnet.AssemblyInfoInputs.cache
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/Debug/net5.0/keycloak-uma-dotnet.AssemblyInfo.cs
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/Debug/net5.0/keycloak-uma-dotnet.csproj.CoreCompileInputs.cache
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/Debug/net5.0/keycloak-uma-dotnet.dll
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/Debug/net5.0/ref/keycloak-uma-dotnet.dll
+/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/Debug/net5.0/keycloak-uma-dotnet.pdb

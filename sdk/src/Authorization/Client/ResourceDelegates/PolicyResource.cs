@@ -22,9 +22,9 @@ namespace Keycloak.Client.Resource
     using System.Text.Json;
     using System.Threading.Tasks;
 
+    using Keycloak.Authorization.Representation;
     using Keycloak.Client.Util;
-    using Keycloak.Representation;
-    using Keycloak.Services;
+    using Keycloak.Client.Services;
 
     using Microsoft.AspNetCore.WebUtilities;
     using Microsoft.Extensions.Logging;
@@ -75,8 +75,8 @@ namespace Keycloak.Client.Resource
                 }
 
                 string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                UmaPermission umaPermissionResponse = JsonSerializer.Deserialize<UmaPermission>(result);
-                return umaPermissionResponse;
+                UmaPermission ?umaPermissionResponse = JsonSerializer.Deserialize<UmaPermission>(result);
+                return umaPermissionResponse!;
             }
         }
 
@@ -159,8 +159,8 @@ namespace Keycloak.Client.Resource
             }
 
             string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            List<UmaPermission> umaPermissions = JsonSerializer.Deserialize<List<UmaPermission>>(result);
-            return umaPermissions;
+            List<UmaPermission> ?umaPermissions = JsonSerializer.Deserialize<List<UmaPermission>>(result);
+            return umaPermissions!;
         }
 
         /// <inheritdoc/>
@@ -181,8 +181,8 @@ namespace Keycloak.Client.Resource
             }
 
             string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            UmaPermission umaPermission = JsonSerializer.Deserialize<UmaPermission>(result);
-            return umaPermission;
+            UmaPermission ?umaPermission = JsonSerializer.Deserialize<UmaPermission>(result);
+            return umaPermission!;
         }
     }
 }

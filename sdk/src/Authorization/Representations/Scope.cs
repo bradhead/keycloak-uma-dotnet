@@ -38,7 +38,7 @@ namespace Keycloak.Authorization.Representation
         public List<AccessPolicy>? Policies { get; } = new List<AccessPolicy>();
 
         /// <summary>Gets the scope resources.</summary>
-        public List<ProtectedResource>? Resources { get; } = new List<ProtectedResource>();
+        public List<Resource>? Resources { get; } = new List<Resource>();
 
         /// <summary>Gets or sets the scope displayName.</summary>
         public string? DisplayName { get; set; }

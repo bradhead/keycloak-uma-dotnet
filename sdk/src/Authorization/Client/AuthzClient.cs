@@ -17,7 +17,7 @@ namespace Keycloak.Client
 {
     using Keycloak.Client.Configuration;
     using Keycloak.Client.Resource;
-    using Keycloak.
+    using Keycloak.Client.Services;
 
     using Microsoft.Extensions.Logging;
 

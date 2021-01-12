@@ -23,8 +23,8 @@ namespace Keycloak.Client.Resource
 
     using Keycloak.Client.Configuration;
     using Keycloak.Client.Representation;
+    using Keycloak.Client.Services;
     using Keycloak.Client.Util;
-    using Keycloak.Services;
 
     using Microsoft.Extensions.Logging;
 
@@ -72,10 +72,10 @@ namespace Keycloak.Client.Resource
             string requestUrl = this.serverConfigurationDelegate.ServerConfiguration.IntrospectionEndpoint;
             client.BaseAddress = new Uri(requestUrl);
 
-            Dictionary<string, string> dict = new Dictionary<string, string>();
+            Dictionary<string, string> ?dict = new Dictionary<string, string>();
             dict.Add("requesting_party_token", "token_type_hint");
             dict.Add("token", rpt);
-            using (HttpContent content = new FormUrlEncodedContent(dict))
+            using (HttpContent ?content = new FormUrlEncodedContent(dict!))
             {
                 content.Headers.Add(@"Content-Type", @"application/x-www-form-urlencoded");
 
@@ -88,8 +88,9 @@ namespace Keycloak.Client.Resource
 
                 string result = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
 
-                TokenIntrospectionResponse introspectionResponse = JsonSerializer.Deserialize<TokenIntrospectionResponse>(result);
-                return introspectionResponse;
+                TokenIntrospectionResponse ?introspectionResponse = JsonSerializer.Deserialize<TokenIntrospectionResponse>(result);
+             
+                return introspectionResponse!;
             }
         }
     }

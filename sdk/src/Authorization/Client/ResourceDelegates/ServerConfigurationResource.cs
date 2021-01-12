@@ -20,9 +20,10 @@ namespace Keycloak.Client.Resource
     using System.Text.Json;
     using System.Threading.Tasks;
 
+    using Keycloak.Authorization;
     using Keycloak.Client.Configuration;
+    using Keycloak.Client.Services;
     using Keycloak.Client.Util;
-    using Keycloak.Services;
 
     using Microsoft.Extensions.Logging;
 
@@ -83,8 +84,8 @@ namespace Keycloak.Client.Resource
             }
 
             string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            ServerConfiguration configurationResponse = JsonSerializer.Deserialize<ServerConfiguration>(result);
-            return configurationResponse;
+            ServerConfiguration ?configurationResponse = JsonSerializer.Deserialize<ServerConfiguration>(result);
+            return configurationResponse!;
         }
     }
 }

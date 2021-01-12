@@ -21,6 +21,7 @@ namespace Keycloak.Administration
 
     using Keycloak.Administration.Models;
     using Keycloak.Authentication.Models;
+    using Keycloak.Client.Services;
 
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.Logging;

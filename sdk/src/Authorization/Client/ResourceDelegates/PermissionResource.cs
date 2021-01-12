@@ -22,8 +22,8 @@ namespace Keycloak.Client.Resource
     using System.Threading.Tasks;
 
     using Keycloak.Client.Util;
-    using Keycloak.Representation;
-    using Keycloak.Services;
+    using Keycloak.Client.Services;
+    using Keycloak.Authorization.Representation;
 
     using Microsoft.Extensions.Logging;
 
@@ -75,8 +75,8 @@ namespace Keycloak.Client.Resource
                 }
 
                 string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                PermissionResponse permissionResponse = JsonSerializer.Deserialize<PermissionResponse>(result);
-                return permissionResponse;
+                PermissionResponse ?permissionResponse = JsonSerializer.Deserialize<PermissionResponse>(result);
+                return permissionResponse!;
             }
         }
 
@@ -102,8 +102,8 @@ namespace Keycloak.Client.Resource
                 }
 
                 string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                PermissionResponse permissionResponse = JsonSerializer.Deserialize<PermissionResponse>(result);
-                return permissionResponse;
+                PermissionResponse ?permissionResponse = JsonSerializer.Deserialize<PermissionResponse>(result);
+                return permissionResponse!;
             }
         }
 
@@ -129,8 +129,8 @@ namespace Keycloak.Client.Resource
                 }
 
                 string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                PermissionTicket permissionResponse = JsonSerializer.Deserialize<PermissionTicket>(result);
-                return permissionResponse;
+                PermissionTicket ?permissionResponse = JsonSerializer.Deserialize<PermissionTicket>(result);
+                return permissionResponse!;
             }
         }
 
@@ -155,8 +155,8 @@ namespace Keycloak.Client.Resource
             }
 
             string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            List<PermissionTicket> permissionTickets = JsonSerializer.Deserialize<List<PermissionTicket>>(result);
-            return permissionTickets;
+            List<PermissionTicket> ?permissionTickets = JsonSerializer.Deserialize<List<PermissionTicket>>(result);
+            return permissionTickets!;
         }
 
         /// <inheritdoc/>
@@ -180,8 +180,8 @@ namespace Keycloak.Client.Resource
             }
 
             string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            List<PermissionTicket> permissionTickets = JsonSerializer.Deserialize<List<PermissionTicket>>(result);
-            return permissionTickets;
+            List<PermissionTicket> ?permissionTickets = JsonSerializer.Deserialize<List<PermissionTicket>>(result);
+            return permissionTickets!;
         }
 
         /// <inheritdoc/>
@@ -221,8 +221,8 @@ namespace Keycloak.Client.Resource
             }
 
             string result = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            List<PermissionTicket> permissionTickets = JsonSerializer.Deserialize<List<PermissionTicket>>(result);
-            return permissionTickets;
+            List<PermissionTicket> ?permissionTickets = JsonSerializer.Deserialize<List<PermissionTicket>>(result);
+            return permissionTickets!;
         }
 
         /// <inheritdoc/>

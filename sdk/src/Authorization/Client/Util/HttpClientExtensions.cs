@@ -23,8 +23,9 @@ namespace Keycloak.Client.Util
     using System.Text;
     using System.Threading.Tasks;
 
-    using Keycloak.Representation;
-    using Keycloak.Representation.Tokens;
+    using Keycloak.Authorization;
+    using Keycloak.Authorization.Representation;
+    using Keycloak.Authorization.Representation.Tokens;
 
     /// <summary>Extensions for HttpClient to handle OAuth 2.0 UMA.</summary>
     public static class HttpClientExtensions
@@ -110,7 +111,7 @@ namespace Keycloak.Client.Util
                 }
             }
 
-            using (HttpContent content = new FormUrlEncodedContent(paramDict))
+            using (HttpContent ?content = new FormUrlEncodedContent(paramDict!))
             {
                 content.Headers.Add(@"Content-Type", @"application/x-www-form-urlencoded");
                 return httpClient.PostAsync(uri, content);
