@@ -1,31 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/keycloak-uma-dotnet.csproj": {}
+    "/Users/bradhead/Documents/GitHub/keycloak-uma-dotnet/sdk/src/keycloak-uma-dotnet.csproj": {}
   },
   "projects": {
-    "/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/keycloak-uma-dotnet.csproj": {
+    "/Users/bradhead/Documents/GitHub/keycloak-uma-dotnet/sdk/src/keycloak-uma-dotnet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/keycloak-uma-dotnet.csproj",
+        "projectUniqueName": "/Users/bradhead/Documents/GitHub/keycloak-uma-dotnet/sdk/src/keycloak-uma-dotnet.csproj",
         "projectName": "keycloak-uma-dotnet",
-        "projectPath": "/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/keycloak-uma-dotnet.csproj",
-        "packagesPath": "/Users/brad/.nuget/packages/",
-        "outputPath": "/Users/brad/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/",
+        "projectPath": "/Users/bradhead/Documents/GitHub/keycloak-uma-dotnet/sdk/src/keycloak-uma-dotnet.csproj",
+        "packagesPath": "/Users/bradhead/.nuget/packages/",
+        "outputPath": "/Users/bradhead/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/brad/.nuget/NuGet/NuGet.Config"
+          "/Users/bradhead/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "NET6.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.pkg.github.com/bradhead/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "NET6.0",
             "projectReferences": {}
           }
         },
@@ -36,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "NET6.0",
           "dependencies": {
             "Microsoft.AspNetCore.WebUtilities": {
               "target": "Package",
@@ -45,27 +44,27 @@
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.Extensions.Http": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.8.0, )"
+              "version": "[6.15.1, )"
             },
             "System.Text.Json": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.1, )"
             }
           },
           "imports": [
@@ -83,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }
