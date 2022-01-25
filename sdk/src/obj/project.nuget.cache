@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UjokBi005z0/CTZXpWaNMe43gVDUtZwBPwzXSS9Fdmygao21DmP+Zk+bcd7TsdgYs0z3eOWNlkTOcCd5Kq1pkg==",
+  "dgSpecHash": "22F+wf7sa4Ki36lWhQ+SPRAsyIxHx/KtRtNfTC1BiLtQ+Vm/Y63pgIhdCtF/7tBzS7zYU7/TqWX5AGVrEMavHw==",
   "success": true,
   "projectFilePath": "/Users/bradhead/Documents/GitHub/keycloak-uma-dotnet/sdk/src/keycloak-uma-dotnet.csproj",
   "expectedPackageFiles": [

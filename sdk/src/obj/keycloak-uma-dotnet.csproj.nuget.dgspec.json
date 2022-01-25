@@ -14,7 +14,7 @@
         "outputPath": "/Users/bradhead/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/bradhead/.config/NuGet/NuGet.Config"
+          "/Users/bradhead/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "NET6.0"

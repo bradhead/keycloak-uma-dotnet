@@ -1644,17 +1644,17 @@
       "outputPath": "/Users/bradhead/Documents/GitHub/keycloak-uma-dotnet/sdk/src/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/bradhead/.config/NuGet/NuGet.Config"
+        "/Users/bradhead/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "NET6.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
-          "targetAlias": "net6.0",
+          "targetAlias": "NET6.0",
           "projectReferences": {}
         }
       },
@@ -1666,7 +1666,7 @@
     },
     "frameworks": {
       "net6.0": {
-        "targetAlias": "net6.0",
+        "targetAlias": "NET6.0",
         "dependencies": {
           "Microsoft.AspNetCore.WebUtilities": {
             "target": "Package",
